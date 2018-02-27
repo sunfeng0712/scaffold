@@ -7,30 +7,23 @@ $params = array_merge(
 );
 
 return [
-    'id' => 'app-admin',
+    'id' => 'app-app',
     'basePath' => dirname(__DIR__),
-    'controllerNamespace' => 'admin\controllers',
+    'controllerNamespace' => 'app\controllers',
     'bootstrap' => ['log'],
-    'modules' => [
-        'admin' => [
-            'class' => 'mdm\admin\Module',
-        ],
-    ],
-    'aliases' => [
-        '@mdm/admin' => '@vendor/mdmsoft/yii2-admin',
-    ],
+    'modules' => [],
     'components' => [
         'request' => [
-            'csrfParam' => '_csrf-admin',
+            'csrfParam' => '_csrf-app',
         ],
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
-            'identityCookie' => ['name' => '_identity-admin', 'httpOnly' => true],
+            'identityCookie' => ['name' => '_identity-app', 'httpOnly' => true],
         ],
         'session' => [
-            // this is the name of the session cookie used for login on the admin
-            'name' => 'advanced-admin',
+            // this is the name of the session cookie used for login on the app
+            'name' => 'advanced-app',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -44,10 +37,6 @@ return [
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
-        'authManager' => [
-            'class' => 'yii\rbac\DbManager',
-            'defaultRoles' => ['guest'],
-        ],
         /*
         'urlManager' => [
             'enablePrettyUrl' => true,
@@ -56,12 +45,6 @@ return [
             ],
         ],
         */
-    ],
-    'as access' => [
-        'class' => 'mdm\admin\components\AccessControl',
-        'allowActions' => [
-            '*'
-        ]
     ],
     'params' => $params,
 ];
