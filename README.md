@@ -1,7 +1,7 @@
 # scaffold
 
 ## Introduction
-scaffold是一个基于Yii2高级模版所实现的工程化脚手架项目。
+scaffold是一个基于Yii2高级模版工程化实现的脚手架。
 
 ## Applications
 ### app
