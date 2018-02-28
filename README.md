@@ -1,9 +1,11 @@
 # scaffold
-Yii2脚手架
+
+## Introduction
+scaffold是一个基于Yii2高级模版所实现的工程化脚手架项目。
 
 ## Applications
 ### app
-APP 数据接口层，提供统一RESTful 调用
+APP 数据接口层，提供统一的RESTful API
 ### admin
 网站管理后台项目，提供AdminLTE模版，及RBAC权限控制
 ### pc/h5
@@ -15,10 +17,20 @@ CLI端
 > 从GitHub下载源码
 
 	git clone https://github.com/yiiplus/scaffold.git
-	
+
 > 下载依赖包
 
 	composer install
+
+> 选择数据库后，可以先创建用户表
+
+	yii merge/create
+
+> 初始化
+
+	php init
+或执行`php init --env=Development  --overwrite=y`无需交互
+
 > 配置Nginx
 
 	server {
@@ -28,7 +40,7 @@ CLI端
 	    listen 80; ## listen for ipv4
 	    #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
 	
-	    server_name application.mysite.local;
+	    server_name ApplicationName.local;
 	    root        /path/to/scaffold/ApplicationName/web;
 	    index       index.php;
 	
@@ -58,5 +70,4 @@ CLI端
 	        deny all;
 	    }
 	}
-
 
