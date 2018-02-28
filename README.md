@@ -13,10 +13,14 @@ CLI端
 
 ## Installation
 > 从GitHub下载源码
+
 	git clone https://github.com/yiiplus/scaffold.git
+	
 > 下载依赖包
+
 	composer install
 > 配置Nginx
+
 	server {
 	    charset utf-8;
 	    client_max_body_size 128M;
