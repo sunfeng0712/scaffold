@@ -3,13 +3,15 @@
 ## Introduction
 scaffold是一个基于Yii2高级模版工程化实现的脚手架。
 
+更多文档指南：[docs/](https://github.com/yiiplus/scaffold/tree/master/docs)
+
 ## Applications
 ### app
-APP 数据接口层，提供统一的RESTful API
+APP 数据接口层，提供统一的RESTful API，访问REST开发指南：[docs/RESTfulAPI.md](https://github.com/yiiplus/scaffold/blob/master/docs/RESTfulAPI.md)，了解更多
 ### admin
-网站管理后台项目，提供AdminLTE模版，及RBAC权限控制
+网站管理后台项目，提供AdminLTE模版，及RBAC权限控制，关于相关配置访问：[docs/AdminLTE_RBAC.md](https://github.com/yiiplus/scaffold/blob/master/docs/AdminLTE_RBAC.md)
 ### pc/h5
-PC/H5端
+PC/H5端，关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)
 ### console
 CLI端
 
