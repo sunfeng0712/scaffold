@@ -51,6 +51,7 @@ CREATE TABLE `menu` (
  KEY `parent` (`parent`),  
  CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+```
 
 ## 配置目录
 TODO
