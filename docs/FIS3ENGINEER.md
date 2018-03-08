@@ -4,11 +4,11 @@
 The preferred way to install this extension is through composer.
 Either run
 
-`php composer.phar require --prefer-dist yiiplus/yii2-fis-smarty`
+`composer require yiiplus/yii2-fis-smarty v1.2.0`
 
 or add
 
-`"yiiplus/yii2-fis-smarty": "~2.0.0"`
+`"yiiplus/yii2-fis-smarty": "~1.0.0"`
 
 to the require section of your composer.json.
 Note that the smarty composer package is distributed using subversion so you may need to install subversion.
