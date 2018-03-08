@@ -35,7 +35,7 @@ CLI端
 
 > 配置Nginx
 
-配置LNMP环境，导入[Nginx配置](https://github.com/yiiplus/scaffold/blob/master/confs/nginx_confs/scaffold.local.conf)。
+配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/confs/nginx_confs/scaffold.local.conf)
 
 ## 日志报警
 >不管你用什么编程语言，都会面临如何处理错误日志的问题。如果对错误日志放任自流，出现故障将追悔莫及。这里我们推荐使用Sentry来做日志报警。
