@@ -40,7 +40,7 @@ CLI端
 配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/confs/nginx_confs/scaffold.local.conf)
 
 ## 前端工程化
-关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)\
+关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)
 
 ## 日志报警
 >不管你用什么编程语言，都会面临如何处理错误日志的问题。如果对错误日志放任自流，出现故障将追悔莫及。这里我们推荐使用Sentry来做日志报警。
@@ -49,4 +49,7 @@ Sentry 是一个错误记录和聚合的平台。
 
 关于如何安装 Sentry，[官方文档](https://docs.sentry.io/server/installation/)里已经给出了详细的说明，建议大家仔细阅读。
 
+TODO
+
+## 容器化与容器编排
 TODO
