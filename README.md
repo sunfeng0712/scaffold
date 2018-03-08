@@ -35,43 +35,7 @@ CLI端
 
 > 配置Nginx
 
-	server {
-	    charset utf-8;
-	    client_max_body_size 128M;
-	
-	    listen 80; ## listen for ipv4
-	    #listen [::]:80 default_server ipv6only=on; ## listen for ipv6
-	
-	    server_name ApplicationName.local;
-	    root        /path/to/scaffold/ApplicationName/web;
-	    index       index.php;
-	
-	    access_log  /path/to/basic/log/access.log;
-	    error_log   /path/to/basic/log/error.log;
-	
-	    location / {
-	        # Redirect everything that isn't a real file to index.php
-	        try_files $uri $uri/ /index.php$is_args$args;
-	    }
-	
-	    # uncomment to avoid processing of calls to non-existing static files by Yii
-	    #location ~ \.(js|css|png|jpg|gif|swf|ico|pdf|mov|fla|zip|rar)$ {
-	    #    try_files $uri =404;
-	    #}
-	    #error_page 404 /404.html;
-	
-	    location ~ \.php$ {
-	        include fastcgi_params;
-	        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-	        fastcgi_pass 127.0.0.1:9000;
-	        #fastcgi_pass unix:/var/run/php5-fpm.sock;
-	        try_files $uri =404;
-	    }
-	
-	    location ~* /\. {
-	        deny all;
-	    }
-	}
+配置LNMP环境，导入[Nginx配置](https://github.com/yiiplus/scaffold/blob/master/confs/nginx_confs/scaffold.local.conf)。
 
 ## 日志报警
 >不管你用什么编程语言，都会面临如何处理错误日志的问题。如果对错误日志放任自流，出现故障将追悔莫及。这里我们推荐使用Sentry来做日志报警。
