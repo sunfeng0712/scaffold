@@ -10,8 +10,10 @@ scaffold是一个基于Yii2高级模版工程化实现的脚手架。
 APP 数据接口层，提供统一的RESTful API，访问REST开发指南：[docs/RESTfulAPI.md](https://github.com/yiiplus/scaffold/blob/master/docs/RESTfulAPI.md)，了解更多
 ### admin
 网站管理后台项目，提供AdminLTE模版，及RBAC权限控制，关于相关配置访问：[docs/AdminLTE_RBAC.md](https://github.com/yiiplus/scaffold/blob/master/docs/AdminLTE_RBAC.md)
-### pc/h5
-PC/H5端，关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)
+### pc
+PC端
+### h5
+H5端
 ### console
 CLI端
 
@@ -36,6 +38,9 @@ CLI端
 > 配置Nginx
 
 配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/confs/nginx_confs/scaffold.local.conf)
+
+## 前端工程化
+关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)\
 
 ## 日志报警
 >不管你用什么编程语言，都会面临如何处理错误日志的问题。如果对错误日志放任自流，出现故障将追悔莫及。这里我们推荐使用Sentry来做日志报警。
