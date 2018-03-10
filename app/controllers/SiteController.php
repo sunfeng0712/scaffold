@@ -28,13 +28,11 @@ class SiteController extends Controller
         $error_handler->registerExceptionHandler();
         $error_handler->registerErrorHandler();
         $error_handler->registerShutdownFunction();
-//        $sentryClient->captureMessage("这里发生了一个错误");
+        //$sentryClient->captureMessage("这里发生了一个错误");
         $ex = $this->raven_cli_test("command name", array("foo" => "bar"));
         $event_id = $sentryClient->captureException($ex);
         echo "-> event ID: $event_id\n";
         $last_error = $sentryClient->getLastError();
-        var_dump($last_error);exit;
-
         return ['code' => '200', 'data' => 'Hello Sentry!'];
     }
 
@@ -46,5 +44,11 @@ class SiteController extends Controller
         } catch (\Exception $ex) {
             return $ex;
         }
+    }
+
+    public function actionTestLog()
+    {
+        Yii::error('123123',__METHOD__);
+        return 123;
     }
 }
