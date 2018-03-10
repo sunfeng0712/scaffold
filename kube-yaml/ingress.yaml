@@ -1,0 +1,36 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: scaffold
+spec:
+  rules:
+    - host: app.scaffold.local
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: scaffold
+              servicePort: 80
+    - host: admin.scaffold.local
+          http:
+            paths:
+              - path: /
+                backend:
+                  serviceName: scaffold
+                  servicePort: 80
+    - host: pc.scaffold.local
+          http:
+            paths:
+              - path: /
+                backend:
+                  serviceName: scaffold
+                  servicePort: 80
+    - host: h5.scaffold.local
+              http:
+                paths:
+                  - path: /
+                    backend:
+                      serviceName: scaffold
+                      servicePort: 80
+          
+            
