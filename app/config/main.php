@@ -11,7 +11,11 @@ return [
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'app\controllers',
     'bootstrap' => ['log'],
-    'modules' => [],
+    'modules' => [
+        'v1' => [
+            'class' => 'app\modules\v1\Module'
+        ]
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-app',
