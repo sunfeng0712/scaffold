@@ -24,6 +24,7 @@ CLI端
 
 > 下载依赖包
 
+	composer global require "fxp/composer-asset-plugin:^1.3.1"
 	composer install
 
 > 选择数据库后，可以先创建用户表
