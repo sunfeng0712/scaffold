@@ -52,8 +52,6 @@ Sentry将日志汇集、聚合、主动报警还拥有漂亮的界面，真正�
 
 ## #FIXME 云原生
 
-云原生构建 TODO
-
 - 容器化: [Docker构建](https://github.com/yiiplus/scaffold/tree/master/kube-yaml/docker_builder)
 - 容器编排: [kube-yaml](https://github.com/yiiplus/scaffold/tree/master/kube-yaml)
 - CICD: [Jenkinsfile](https://raw.githubusercontent.com/yiiplus/scaffold/master/Jenkinsfile)
