@@ -2,7 +2,7 @@
 namespace h5\controllers;
 
 use Yii;
-use yii\web\Controller;
+use h5\controllers\BaseController;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
@@ -10,7 +10,7 @@ use common\models\LoginForm;
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends BaseController
 {
     /**
      * @inheritdoc
