@@ -40,7 +40,7 @@ CLI端
 
 配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/confs/nginx_confs/scaffold.local.conf)
 
-## 前端工程化
+## #FIXME 前端工程化
 关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)
 
 ## #FIXME 错误日志聚合平台
