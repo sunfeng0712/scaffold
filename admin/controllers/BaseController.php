@@ -9,7 +9,9 @@ class BaseController extends Controller
     /**
      * @inheritdoc
      */
-    public function behaviors() {}
+    public function behaviors() {
+        return parent::behaviors();
+    }
 
     /**
      * @inheritdoc

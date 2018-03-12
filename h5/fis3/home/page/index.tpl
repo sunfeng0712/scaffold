@@ -6,7 +6,7 @@
 
     {body}
         {block name="content"}
-            <div>111</div>
+            <div>hello, h5!</div>
         {/block}
     {/body}
 {/html}
