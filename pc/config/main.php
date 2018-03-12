@@ -34,6 +34,14 @@ return [
                 ],
             ],
         ],
+        'view' => [
+            'renderers' => [
+                'tpl' => [
+                    'class' => 'yiiplus\fis\smarty\ViewRenderer',
+                    'configDirs' => ['@app/config/fis'],
+                ],
+            ],
+        ],
         'errorHandler' => [
             'errorAction' => 'site/error',
         ],
