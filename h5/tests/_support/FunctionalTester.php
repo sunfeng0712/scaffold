@@ -1,5 +1,5 @@
 <?php
-namespace backend\tests;
+namespace h5\tests;
 
 /**
  * Inherited Methods
