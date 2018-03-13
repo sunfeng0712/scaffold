@@ -51,8 +51,8 @@ Sentry将日志汇集、聚合、主动报警还拥有漂亮的界面，真正�
 
 我们可以使用[Docker搭建私有Sentry服务](https://juejin.im/post/5a992115f265da239f06d0d7)，使用方面[mito](mito.hu)开源的[yii2-sentry](https://github.com/hellowearemito/yii2-sentry)组件提供了YiiLogTarget方案。
 
-## #FIXME 云原生
-
-- 容器化: [Docker构建](https://github.com/yiiplus/scaffold/tree/master/kube-yaml/docker_builder)
-- 容器编排: [kube-yaml](https://github.com/yiiplus/scaffold/tree/master/kube-yaml)
-- CICD: [Jenkinsfile](https://raw.githubusercontent.com/yiiplus/scaffold/master/Jenkinsfile)
+## DevOps
+### #TODO v1
+传统架构下使用Jenkins实现的CI\CD
+### #FIXME v2
+云原生架构下，Jenkins配合Kubernetes实现在容器云下的CI\CD
