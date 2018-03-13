@@ -27,8 +27,8 @@ pipeline {
         RELEASE_TO='/data/site/'
 
         //测试环境用户\IP
-        DEVELOP_USER=''
-        DEVELOP_S1=''
+        TEST_USER=''
+        TEST_S1=''
         //生产环境用户\IP
         MASTER_USER=''
         MASTER_S1=''
@@ -118,7 +118,7 @@ pipeline {
                             if (env.BRANCH_NAME == 'master') {
                                 deployJob(MASTER_S1)
                             } else {
-                                deployJob(DEVELOP_S1)
+                                deployJob(TEST_S1)
                             }
                         }
                     }
@@ -151,7 +151,7 @@ pipeline {
                             if (env.BRANCH_NAME == 'master') {
                                 updateLnJob(MASTER_S1, MASTER_USER)
                             } else {
-                                updateLnJob(DEVELOP_S1, DEVELOP_USER)
+                                updateLnJob(TEST_S1, TEST_USER)
                             }
                         }
                     }
@@ -183,7 +183,7 @@ pipeline {
                 if (env.BRANCH_NAME == 'master') {
                     sh "ssh root@${MASTER_S1} 'ls -1 ${RELEASE_LIB}${PROJECT_NAME}/' > .release/list"
                 } else {
-                    sh "ssh root@${DEVELOP_S1} 'ls -1 ${RELEASE_LIB}${PROJECT_NAME}/' > .release/list"
+                    sh "ssh root@${TEST_S1} 'ls -1 ${RELEASE_LIB}${PROJECT_NAME}/' > .release/list"
                 }
             }
         }
@@ -232,7 +232,7 @@ def updateLnJob(host, user='root') {
     if (env.BRANCH_NAME == 'master') {
         sh "ssh root@${MASTER_S1} 'service php-fpm restart'"
     } else {
-        sh "ssh root@${DEVELOP_S1} 'service php-fpm restart'"
+        sh "ssh root@${TEST_S1} 'service php-fpm restart'"
     }
     return true
 }
