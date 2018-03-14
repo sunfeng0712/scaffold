@@ -27,7 +27,7 @@ scaffold是一个基于Yii2高级模版工程化实现的脚手架。
 
 配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/confs/nginx_confs/scaffold.local.conf)
 
-##目录结构
+## 目录结构
 ```$xslt
 common
     config/              包含common配置
