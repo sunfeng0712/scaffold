@@ -39,7 +39,7 @@ class SiteController extends BaseController
 
     public function actionTestLog()
     {
-        Yii::error('123123',__METHOD__);
+        Yii::error('支付失败了',__METHOD__);
         return 123;
     }
 }
