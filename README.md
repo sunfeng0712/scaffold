@@ -11,7 +11,7 @@
 ## 安装
 - Yii的最低PHP版本是PHP 5.4。
 - 它最适合PHP 7。
-- 阅读[本地容器化部署指南](https://github.com/yiiplus/scaffold/blob/master/docs/LOCALINSTALLWITHDOCKERGUIDE.md)完成项目安装。
+- 阅读[本地容器化部署指南](https://github.com/yiiplus/scaffold/blob/master/docs/本地容器化部署指南.md)完成项目安装。
 
 ## 文档
 - Yii 提供了一整套用来简化实现 RESTful 风格的 Web Service 服务的 API。点击查看[文档](https://github.com/yiiplus/scaffold/blob/master/docs/RESTFULAPI.md)
