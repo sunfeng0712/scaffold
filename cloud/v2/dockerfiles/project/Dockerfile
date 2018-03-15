@@ -1,4 +1,4 @@
-FROM reg.example.com/library/base/php5.6-nginx:v1.0.0
+FROM BASE_SERVER
 
 ADD project.tar.gz /data/site/
 

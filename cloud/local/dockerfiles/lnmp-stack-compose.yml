@@ -1,0 +1,44 @@
+version: '2'
+
+services:
+
+    mysql:
+        container_name: mysql
+        image: daocloud.io/library/mysql
+        restart: always
+        expose:
+            - "3306"
+        ports: 
+            - "3306:3306"
+        volumes:
+            - ~/opt/data/docker_data/mysql/data:/data
+            - ~/opt/data/docker_data/mysql/var-lib-mysql:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD=root
+        restart: always
+
+    php-fpm:
+        container_name: php-fpm
+        build: PHP7.1
+        restart: always
+        expose:
+            - "9000"
+        volumes:
+            - ~/opt/data/docker_data/php-fpm:/data
+        links:
+            - mysql:mysql
+
+    nginx:
+        container_name: nginx
+        build: OpenResty
+        restart: always
+        ports:
+            - "80:80"
+            - "443:443"
+        volumes:
+            - ~/opt/data/docker_data/nginx/conf.d:/etc/nginx/conf.d
+        volumes_from:
+            - php-fpm
+        links:
+            - mysql:mysql
+            - php-fpm:php-fpm
