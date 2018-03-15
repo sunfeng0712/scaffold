@@ -80,4 +80,29 @@ return [
             'basic/config/main-local.php',
         ],
     ],
+    'Test' => [
+        'path' => 'test',
+        'setWritable' => [
+            'h5/runtime',
+            'h5/web/assets',
+            'pc/runtime',
+            'pc/web/assets',
+            'app/runtime',
+            'app/web/assets',
+            'admin/runtime',
+            'admin/web/assets',
+            'basic/runtime',
+            'basic/web/assets',
+        ],
+        'setExecutable' => [
+            'yii',
+        ],
+        'setCookieValidationKey' => [
+            'h5/config/main-local.php',
+            'pc/config/main-local.php',
+            'app/config/main-local.php',
+            'admin/config/main-local.php',
+            'basic/config/main-local.php',
+        ],
+    ],
 ];

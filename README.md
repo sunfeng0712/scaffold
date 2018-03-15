@@ -45,6 +45,7 @@ app
     config/              包含app配置
     modules/             包含app模块
         v1/              包含app的v1版本模块
+        v2/              包含app的v2版本模块
     runtime/             包含运行时生成的文件
     tests/               包含app应用程序的测试
     web/                 包含app入口脚本和资源
@@ -94,9 +95,3 @@ DevOps
 Sentry将日志汇集、聚合、主动报警还拥有漂亮的界面，真正提高了日志利用的效率。
 
 我们可以使用[Docker搭建私有Sentry服务](https://juejin.im/post/5a992115f265da239f06d0d7)，使用方面[mito](mito.hu)开源的[yii2-sentry](https://github.com/hellowearemito/yii2-sentry)组件提供了YiiLogTarget方案。
-
-## DevOps
-### #TODO v1
-传统架构下使用Jenkins实现的CI\CD
-### #FIXME v2
-云原生架构下，Jenkins配合Kubernetes实现在容器云下的CI\CD
