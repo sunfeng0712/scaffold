@@ -2,8 +2,6 @@
 
 namespace app\modules\v1\controllers;
 
-use app\controllers\BaseController;
-
 /**
  * Default controller for the `v1` module
  */
