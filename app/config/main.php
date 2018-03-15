@@ -8,6 +8,7 @@ $params = array_merge(
 
 return [
     'id' => 'app-app',
+    'defaultRoute' => 'v1/',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'app\controllers',
     'bootstrap' => ['log'],
