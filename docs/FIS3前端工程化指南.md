@@ -1,4 +1,4 @@
-# FIS3前端工程化 
+# FIS3前端工程化指南
 
 ## Installation
 The preferred way to install this extension is through composer.
