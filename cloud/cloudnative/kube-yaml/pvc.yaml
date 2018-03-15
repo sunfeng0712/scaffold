@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: tradition
 kind: PersistentVolumeClaim
 metadata:
   name: scaffold-pvc

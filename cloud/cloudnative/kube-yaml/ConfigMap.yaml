@@ -1,4 +1,4 @@
-apiVersion: v1
+apiVersion: tradition
 kind: ConfigMap
 metadata:
   name: scaffold-nginx-config-volume

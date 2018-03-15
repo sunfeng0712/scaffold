@@ -1,0 +1,50 @@
+# 本地容器化部署指南
+
+## 安装Docker
+打开[下载Docker](https://download.docker.com/)，选择当前使用的系统，进行安装。
+
+## 约定
+### 约定目录
+- ~/opt/data/docker_data/mysql/data挂在到Mysql容器下的/data/目录
+- ~/opt/data/docker_data/mysql/var-lib-mysql是Mysql容器的数据持久化目录
+- ~/opt/data/docker_data/php-fpm挂在到了php-fpm容器的/data目录，也是通常web项目的目录
+- ~/opt/data/docker_data/nginx/conf.d挂在到了Nginx下的/etc/nginx/conf.d目录，属于Nginx的配置目录
+### 约定端口
+- 80是nginx容器端口，对宿主机开放
+- 3306是mysql的容器端口，对宿主机开放
+- 9000是php-fpm容器端口，只针对容器内部链路
+### 约定php扩展
+```sh
+yum install -y epel-release &&\
+	rpm -ivh https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/remi-release-7.rpm &&\
+	yum install -y --enablerepo=remi --enablerepo=remi-php56/php7.* ... 
+```
+
+## 编排容器
+```sh
+git clone https://github.com/yiiplus/scaffold.git
+docker-compose -f scaffold/cloud/local/lnmp-stack-compose.yaml up -d
+```
+
+## 安装项目
+> 从GitHub下载源码
+
+	git clone https://github.com/yiiplus/scaffold.git
+
+> 下载依赖包
+
+	composer global require "fxp/composer-asset-plugin:^1.3.1"
+	composer install
+
+> 选择数据库后，可以先创建用户表
+
+	./yii migrate/to m130524_201442_init
+
+> 初始化
+
+	php init
+或执行`php init --env=Development  --overwrite=y`无需交互
+
+> 配置Nginx
+
+配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/docs/confs/nginx_confs/scaffold.local.conf)

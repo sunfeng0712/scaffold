@@ -3,7 +3,7 @@
 namespace app\modules\v1;
 
 /**
- * v1 module definition class
+ * tradition module definition class
  */
 class Module extends \yii\base\Module
 {

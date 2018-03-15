@@ -8,11 +8,11 @@ spec:
     metadata:
       labels:
         app: scaffold
-        version: v1.0.0
+        version: tradition.0.0
     spec:
       containers:
       - name: project
-        image: reg.example.com/library/***:v1.0.0
+        image: reg.example.com/library/***:tradition.0.0
         ports:
         - containerPort: 80
         volumeMounts:

@@ -3,7 +3,7 @@
 namespace app\modules\v1\controllers;
 
 /**
- * Default controller for the `v1` module
+ * Default controller for the `tradition` module
  */
 class DefaultController extends BaseController
 {
@@ -13,6 +13,6 @@ class DefaultController extends BaseController
      */
     public function actionIndex()
     {
-        return ['hello v1!'];
+        return ['hello tradition!'];
     }
 }

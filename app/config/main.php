@@ -8,15 +8,15 @@ $params = array_merge(
 
 return [
     'id' => 'app-app',
-    'defaultRoute' => 'v1/',
+    'defaultRoute' => 'tradition/',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'app\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        'v1' => [
+        'tradition' => [
             'class' => 'app\modules\v1\Module'
         ],
-        'v2' => [
+        'cloudnative' => [
             'class' => 'app\modules\v2\Module'
         ]
     ],

@@ -1,33 +1,24 @@
 # scaffold
 
-scaffold是一个基于Yii2高级模版工程化实现的脚手架。
+*scaffold*是一个基于[Yii2高级项目模版](https://github.com/yiisoft/yii2-app-advanced)工程化实现的应用程序，它将更加高效、规范和工程化的满足项目开发的需求。
 
-更多文档指南：[docs/](https://github.com/yiiplus/scaffold/tree/master/docs)
+*scaffold*包含五层：*app*、*pc*、*h5*、*admin*和*console*，每个层次都是独立的Yii应用程序。并且同样*Out of the box*。
+
+此外，*scaffold*还完美融合了*Cloud Native*、*Sentry*、*fis前端工程化*等技术。
+
+[![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
 
 ## 安装
-> 从GitHub下载源码
+- Yii的最低PHP版本是PHP 5.4。
+- 它最适合PHP 7。
+- 阅读[本地容器化部署指南](https://raw.githubusercontent.com/yiiplus/scaffold/master/docs/LOCALINSTALLWITHDOCKERGUIDE.md)完成项目安装。
 
-	git clone https://github.com/yiiplus/scaffold.git
+## 文档
+- Yii 提供了一整套用来简化实现 RESTful 风格的 Web Service 服务的 API。文档在:[dcos/RESTFULAPI](https://github.com/yiiplus/scaffold/blob/master/docs/RESTFULAPI.md)
+- 关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)
+- 错误日志聚合平台实现，文档在[docs/SentryGuide](https://github.com/yiiplus/scaffold/blob/master/docs/SENTRYGUIDE.md)
 
-> 下载依赖包
-
-	composer global require "fxp/composer-asset-plugin:^1.3.1"
-	composer install
-
-> 选择数据库后，可以先创建用户表
-
-	./yii migrate/to m130524_201442_init
-
-> 初始化
-
-	php init
-或执行`php init --env=Development  --overwrite=y`无需交互
-
-> 配置Nginx
-
-配置LNMP环境，导入[Nginx配置](https://raw.githubusercontent.com/yiiplus/scaffold/master/confs/nginx_confs/scaffold.local.conf)
-
-## 目录结构
+## 目录树
 ```$xslt
 common
     config/              包含common配置
@@ -78,20 +69,10 @@ pc
     tests/               包含test应用程序的测试
     views/               包含pc应用程序的视图文件
     web/                 包含pc入口脚本和资源
+cloud
+    local/               本地容器化部署
+    tradition/           包含传统架构下使用Jenkins实现的CI\CD
+    cloudnative/         包含云原生架构下，Jenkins配合Kubernetes实现在容器云下的CI\CD
 vendor/                  包含相关的第三方软件包
 environments/            包含基于环境的覆盖
-DevOps
-    v1/                  包含传统架构下使用Jenkins实现的CI\CD
-    v2/                  包含云原生架构下，Jenkins配合Kubernetes实现在容器云下的CI\CD
 ```
-
-## 前端工程化
-关于yii2与FIS3工程化结合，请访问：[docs/FIS3ENGINEER.md](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3ENGINEER.md)
-
-## 错误日志聚合平台
-
-程序运行的日志是一个必不可少的东西，传统程序日志文件过于分散、内容过于繁杂，很可能在程序刚开始运行起来的时候，我们会检查一下情况，看看日志是否正常。但是更多的时候我们根本不会想去看那些冗长的日志。过了一段时间，突然有人告诉我们问题出现了，便又怀着沉重的心情慌张地检查日志开始排查错误。
-
-Sentry将日志汇集、聚合、主动报警还拥有漂亮的界面，真正提高了日志利用的效率。
-
-我们可以使用[Docker搭建私有Sentry服务](https://juejin.im/post/5a992115f265da239f06d0d7)，使用方面[mito](mito.hu)开源的[yii2-sentry](https://github.com/hellowearemito/yii2-sentry)组件提供了YiiLogTarget方案。
