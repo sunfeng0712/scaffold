@@ -8,7 +8,7 @@ services:
         restart: always
         expose:
             - "3306"
-        ports: 
+        ports:
             - "3306:3306"
         volumes:
             - ~/opt/data/docker_data/mysql/data:/data
@@ -17,28 +17,15 @@ services:
             - MYSQL_ROOT_PASSWORD=root
         restart: always
 
-    php-fpm:
-        container_name: php-fpm
-        build: PHP7.1
-        restart: always
-        expose:
-            - "9000"
-        volumes:
-            - ~/opt/data/docker_data/php-fpm:/data
-        links:
-            - mysql:mysql
-
     nginx:
-        container_name: nginx
-        build: OpenResty
+        container_name: scaffold
+        build: ./
         restart: always
         ports:
             - "80:80"
             - "443:443"
         volumes:
-            - ~/opt/data/docker_data/nginx/conf.d:/etc/nginx/conf.d
-        volumes_from:
-            - php-fpm
+            - ~/opt/data/docker_data/scaffold/data:/data
+            - ~/opt/data/docker_data/scaffold/nginx/conf.d:/etc/nginx/conf.d
         links:
             - mysql:mysql
-            - php-fpm:php-fpm
