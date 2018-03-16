@@ -14,9 +14,10 @@
 - 阅读[本地容器化部署指南](https://github.com/yiiplus/scaffold/blob/master/docs/本地容器化部署指南.md)完成项目安装。
 
 ## 文档
-- Yii 提供了一整套用来简化实现 RESTful 风格的 Web Service 服务的 API。点击查看[文档](https://github.com/yiiplus/scaffold/blob/master/docs/RESTFULAPI.md)
+- Yii 提供了一整套用来简化实现 RESTful 风格的 Web Service 服务的 API，点击查看[文档](https://github.com/yiiplus/scaffold/blob/master/docs/RESTFULAPI.md)
 - 关于yii2与FIS3工程化结合，请访问[FIS3前端工程化指南](https://github.com/yiiplus/scaffold/blob/master/docs/FIS3前端工程化指南.md)
-- 错误日志聚合平台实现，请问此[地址](https://github.com/yiiplus/scaffold/blob/master/docs/错误日志聚合平台.md)查看文档
+- admin层集成了AdminLTE模版及RBAC权限控制，请访问[ADMINLTE_RBAC](https://github.com/yiiplus/scaffold/blob/master/docs/ADMINLTE_RBAC.md)进行初始化
+- 错误日志聚合平台实现，请访问此[地址](https://github.com/yiiplus/scaffold/blob/master/docs/错误日志聚合平台.md)查看文档
 
 ## 目录树
 ```$xslt
