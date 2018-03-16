@@ -11,8 +11,14 @@ RUN yum install -y readline-devel pcre-devel openssl-devel perl wget gcc make &&
     make && make install &&\
     ln -s /opt/openresty/nginx/conf /etc/nginx
 
-EXPOSE 80
+RUN yum install -y epel-release &&\
+	rpm -ivh https://mirrors.tuna.tsinghua.edu.cn/remi/enterprise/remi-release-7.rpm &&\
+	yum install -y --enablerepo=remi --enablerepo=remi-php71 php php-opcache php-devel php-mbstring php-xml php-zip php-cli php-fpm php-mcrypt php-mysql php-pdo php-curl php-gd php-mysqld php-bcmath openssh-server nginx &&\
+	yum clean all
 
 COPY docker-entrypoint.sh /usr/local/bin/
+
+EXPOSE 9000
+EXPOSE 80
 
 CMD ["docker-entrypoint.sh"]

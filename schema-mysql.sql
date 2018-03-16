@@ -1,12 +1,5 @@
 /**
- * Database schema required by \yii\rbac\DbManager.
- *
- * @author Qiang Xue <qiang.xue@gmail.com>
- * @author Alexander Kochetov <creocoder@gmail.com>
- * @link http://www.yiiframework.com/
- * @copyright 2008 Yii Software LLC
- * @license http://www.yiiframework.com/license/
- * @since 2.0
+ * Database schema required by scaffold.
  */
 
 drop table if exists `auth_assignment`;
@@ -55,3 +48,17 @@ create table `auth_assignment`
    foreign key (`item_name`) references `auth_item` (`name`) on delete cascade on update cascade,
    key `auth_assignment_user_id_idx` (`user_id`)
 ) engine InnoDB;
+
+drop table if exists `menu`;
+
+CREATE TABLE `menu` (
+ `id` int(11) NOT NULL AUTO_INCREMENT,
+ `name` varchar(128) NOT NULL,
+ `parent` int(11) DEFAULT NULL,
+ `route` varchar(256) DEFAULT NULL,
+ `order` int(11) DEFAULT NULL,
+ `data` text,
+ PRIMARY KEY (`id`),
+ KEY `parent` (`parent`),
+ CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
