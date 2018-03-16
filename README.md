@@ -8,7 +8,7 @@
 
 [![Yii2](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=flat)](http://www.yiiframework.com/)
 [![Apache--2.0](https://img.shields.io/badge/LICENSE-Apache--2.0-blue.svg)](https://github.com/yiiplus/scaffold/blob/master/LICENSE)
-[Jenkins](https://img.shields.io/jenkins/s/https/jenkins.qa.ubuntu.com/view/Precise/view/All%20Precise/job/precise-desktop-amd64_default.svg)
+![Jenkins](https://img.shields.io/jenkins/s/https/jenkins.qa.ubuntu.com/view/Precise/view/All%20Precise/job/precise-desktop-amd64_default.svg)
 [![DOCS](https://img.shields.io/badge/docs-passing-orange.svg)](https://github.com/scaffold/scaffold/tree/master/docs)
 
 ## 安装
