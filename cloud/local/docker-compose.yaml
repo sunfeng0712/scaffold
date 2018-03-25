@@ -12,12 +12,12 @@ services:
             - "3306:3306"
         volumes:
             - ~/opt/data/docker_data/mysql/data:/data
-            - ~/opt/data/docker_data/mysql/var-lib-mysql:/var/lib/mysql
+            - ~/opt/data/docker_data/mysql/var-lib-mysql2:/var/lib/mysql
         environment:
             - MYSQL_ROOT_PASSWORD=root
         restart: always
 
-    nginx:
+    scaffold:
         container_name: scaffold
         build: ./
         restart: always

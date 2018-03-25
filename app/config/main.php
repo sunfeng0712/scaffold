@@ -8,15 +8,15 @@ $params = array_merge(
 
 return [
     'id' => 'app-app',
-    'defaultRoute' => 'tradition/',
+    'defaultRoute' => 'v1/',
     'basePath' => dirname(__DIR__),
     'controllerNamespace' => 'app\controllers',
     'bootstrap' => ['log'],
     'modules' => [
-        'tradition' => [
+        'v1' => [
             'class' => 'app\modules\v1\Module'
         ],
-        'cloudnative' => [
+        'v2' => [
             'class' => 'app\modules\v2\Module'
         ]
     ],
@@ -27,6 +27,8 @@ return [
         'user' => [
             'identityClass' => 'common\models\User',
             'enableAutoLogin' => true,
+            'enableSession' => false,
+            'loginUrl' => null,
             'identityCookie' => ['name' => '_identity-app', 'httpOnly' => true],
         ],
         'session' => [

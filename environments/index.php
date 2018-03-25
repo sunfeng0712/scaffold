@@ -37,11 +37,8 @@ return [
             'pc/runtime',
             'pc/web/assets',
             'app/runtime',
-            'app/web/assets',
             'admin/runtime',
             'admin/web/assets',
-            'basic/runtime',
-            'basic/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -52,7 +49,6 @@ return [
             'pc/config/main-local.php',
             'app/config/main-local.php',
             'admin/config/main-local.php',
-            'basic/config/main-local.php',
         ],
     ],
     'Production' => [
@@ -63,11 +59,8 @@ return [
             'pc/runtime',
             'pc/web/assets',
             'app/runtime',
-            'app/web/assets',
             'admin/runtime',
             'admin/web/assets',
-            'basic/runtime',
-            'basic/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -77,7 +70,6 @@ return [
             'pc/config/main-local.php',
             'app/config/main-local.php',
             'admin/config/main-local.php',
-            'basic/config/main-local.php',
         ],
     ],
     'Test' => [
@@ -88,11 +80,8 @@ return [
             'pc/runtime',
             'pc/web/assets',
             'app/runtime',
-            'app/web/assets',
             'admin/runtime',
             'admin/web/assets',
-            'basic/runtime',
-            'basic/web/assets',
         ],
         'setExecutable' => [
             'yii',
@@ -102,7 +91,6 @@ return [
             'pc/config/main-local.php',
             'app/config/main-local.php',
             'admin/config/main-local.php',
-            'basic/config/main-local.php',
         ],
     ],
 ];
