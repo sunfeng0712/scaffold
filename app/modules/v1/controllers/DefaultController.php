@@ -13,7 +13,7 @@ class DefaultController extends BaseController
         $behaviors = array_merge_recursive($behaviors, [
             'authenticator' => [
                 'optional' => [
-                    'index'
+                    //'index'
                 ]
             ]
         ]);
@@ -26,7 +26,6 @@ class DefaultController extends BaseController
      */
     public function actionIndex()
     {
-        var_dump(\Yii::$app->request->post());exit;
         return ['hello tradition!'];
     }
 }

@@ -15,12 +15,12 @@ class BaseController extends Controller
         $behaviors = parent::behaviors();
         //ContentNegotiator支持响应内容格式处理和语言处理
         $behaviors['contentNegotiator']['formats']['text/html'] = Response::FORMAT_JSON;
-        //fixme
+        //UriTokeniza过滤器
         $behaviors['uriTokenization'] = [
             'class' => UriTokenization::className(),
             'tokenForm' => 'JWT',
             'except' => [
-                #'index'
+                //'index'
             ],
         ];
         //支持认证列表

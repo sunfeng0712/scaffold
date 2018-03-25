@@ -15,6 +15,6 @@ class Jwt extends Component
 
     public function decode($jwt)
     {
-        FJWT::decode($jwt, $this->sercet, $this->algorithms);
+        return FJWT::decode($jwt, $this->sercet, $this->algorithms);
     }
 }
