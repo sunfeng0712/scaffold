@@ -2,9 +2,9 @@
 
 namespace app\modules\v1\controllers;
 
+use common\models\User;
 use Yii;
 use common\models\LoginForm;
-use \Firebase\JWT\JWT;
 
 /**
  * Default controller for the `tradition` module
@@ -39,9 +39,10 @@ class SiteController extends BaseController
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
-        $model = new LoginForm();
 
+        $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            return Yii::$app->jwt->encode(['auth_key' => Yii::$app->user->identity->auth_key]);
         }
         return;
     }

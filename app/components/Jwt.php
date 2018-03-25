@@ -7,7 +7,7 @@ use \Firebase\JWT\JWT as FJWT;
 
 class Jwt extends Component
 {
-    public $sercet;
+    public $salt;
 
     public $algorithms = [
         'HS256'
@@ -15,6 +15,11 @@ class Jwt extends Component
 
     public function decode($jwt)
     {
-        return FJWT::decode($jwt, $this->sercet, $this->algorithms);
+        return FJWT::decode($jwt, $this->salt, $this->algorithms);
+    }
+
+    public function encode($token)
+    {
+        return FJWT::encode($token, $this->salt);
     }
 }
