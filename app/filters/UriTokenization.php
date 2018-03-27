@@ -40,28 +40,23 @@ class UriTokenization extends ActionFilter
     /**
      * @var string pass whether to debug the parameter name
      */
-    public $debugParam = 'is-debugging';
-    /**
-     * @var integer 是否正在调试，默认0，没进行调试；此参数可通过uri中传递`$this->debugParam`设置
-     * 1为正在调试，但只有在`YII_ENV == dev`并且`$this->debugParam`为`1`时，才真正进入调试模式
-     * 当进入调试模式时，不需要uritoken化，通过get/post方式进行参数请求即可
-     */
-    public $isDebugging = 0;
+    public $isDebug = 'debug';
 
     /**
      * {@inheritdoc}
      */
     public function beforeAction($action)
     {
-        $isDebugging = Yii::$app->request->get($this->debugParam, $this->isDebugging);
-        //调试模式下可以同时接受get\post两种方式的uri
-        if (YII_ENV == 'dev' && $isDebugging == '1') {
+        // 调试模式下可以同时接受get\post两种方式的uri
+        $isDebug = Yii::$app->request->get($this->isDebug, 0);
+        if (YII_DEBUG && $isDebug === 1) {
             unset($_GET[$this->debugParam]);
             $bodyParams = yii\helpers\ArrayHelper::merge($_GET, $_POST);
             Yii::$app->request->setBodyParams($bodyParams);
             return true;
         }
 
+        // Token验证
         $uriToken = Yii::$app->request->post($this->tokenParam, '');
         if (empty($uriToken)) return true;
         switch ($this->tokenForm) {

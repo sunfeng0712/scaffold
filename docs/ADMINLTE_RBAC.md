@@ -8,7 +8,7 @@
 
 ### 创建菜单表
 ```sql
-CREATE TABLE `menu` (  
+CREATE TABLE `admin_menu` (  
  `id` int(11) NOT NULL AUTO_INCREMENT,  
  `name` varchar(128) NOT NULL,  
  `parent` int(11) DEFAULT NULL,  
