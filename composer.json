@@ -15,10 +15,10 @@
         "yiisoft/yii2": "~2.0.6",
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+        "yiiplus/yii2-fis-smarty": "~1.0.0",
         "dmstr/yii2-adminlte-asset": "2.*",
         "mdmsoft/yii2-admin": "~2.0",
         "sentry/sentry": "^1.8",
-        "yiiplus/yii2-fis-smarty": "@dev",
         "mito/yii2-sentry": "~1.0.0",
         "firebase/php-jwt": "^5.0"
     },
